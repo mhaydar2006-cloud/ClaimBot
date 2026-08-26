@@ -1,0 +1,7 @@
+{
+  "organizationId": "internal",
+  "organizationName": "Internal / Unknown Administration",
+  "country": "Lebanon",
+  "coverageNote": "No verified external provider-side rule set is encoded for this administrator. ClaimBot will evaluate intake completeness only and require manual payer verification.",
+  "rules": []
+}

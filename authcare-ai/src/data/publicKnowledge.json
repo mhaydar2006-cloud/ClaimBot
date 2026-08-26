@@ -1,0 +1,964 @@
+[
+  {
+    "id": "nextcare-network-eligibility",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_beneficiary_guide",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "network",
+      "eligibility",
+      "lumi",
+      "benefits"
+    ],
+    "text": "Nextcare's Lebanon beneficiary guidance directs members to confirm that a provider is in their network and to review available benefits in Lumi or with the insurer before seeking preauthorization.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-elective-admission",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_beneficiary_guide",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "hospitalization_elective"
+    ],
+    "tags": [
+      "inpatient",
+      "mra",
+      "medical report",
+      "nssf",
+      "insurance card",
+      "id",
+      "results",
+      "admission date"
+    ],
+    "text": "For non-emergency inpatient admission in Lebanon, Nextcare publicly lists a dated, signed and stamped medical report/MRA, NSSF pre-approval when required, insurance card, ID, related procedure results, provider name and admission date as submission information.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-ambulatory",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_beneficiary_guide",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "diagnostic_imaging",
+      "physiotherapy"
+    ],
+    "tags": [
+      "ambulatory",
+      "mri",
+      "ct",
+      "physiotherapy",
+      "unified prescription",
+      "nssf",
+      "insurance card",
+      "id"
+    ],
+    "text": "For ambulatory diagnostic services and physiotherapy, Nextcare's Lebanon guide lists a completed unified prescription with patient and clinical details, physician date/signature/stamp, insurance card and ID; NSSF prior approval applies when required, with MRI, CT and physiotherapy given as examples.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-acute-medications",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_beneficiary_guide",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "medication_acute"
+    ],
+    "tags": [
+      "acute",
+      "medication",
+      "prescription",
+      "pharmacy",
+      "insurance card",
+      "id"
+    ],
+    "text": "For acute prescribed medicines, Nextcare's Lebanon guide says the pharmacy preapproval workflow uses a completed unified medical prescription containing patient identity and clinical motive, dated, signed and stamped by a physician, together with insurance card and ID.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-chronic-medications",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_beneficiary_guide",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "medication_chronic"
+    ],
+    "tags": [
+      "chronic",
+      "medication",
+      "prescription key",
+      "preauthorization",
+      "pharmacy"
+    ],
+    "text": "Nextcare's Lebanon guide describes a monthly chronic-prescription workflow in which the chronic prescription request is processed and a prescription key, with a preauthorization form when applicable, is used at a covered pharmacy together with ID and insurance card.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-doctor-visit",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_beneficiary_guide",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "doctor_visit"
+    ],
+    "tags": [
+      "doctor",
+      "consultation",
+      "direct billing",
+      "insurance card",
+      "id",
+      "preauthorization"
+    ],
+    "text": "For a direct-billing doctor visit, Nextcare's Lebanon guide says the member presents identification and insurance cards at the clinic; in some situations Nextcare may require preauthorization to confirm medical eligibility.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-reimbursement-inpatient",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_reimbursement_guide",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "reimbursement",
+      "inpatient",
+      "medical report",
+      "er sheet",
+      "operating room",
+      "discharge summary",
+      "invoice",
+      "nssf"
+    ],
+    "text": "Nextcare's Lebanon reimbursement guide lists original inpatient medical documentation such as the detailed admission report, emergency-room sheet when applicable, operating-room sheet, prescribed tests/results/treatment, discharge summary, original itemized invoice/receipt and patient ID/insurance card, with NSSF documentation where applicable.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-reimbursement-imaging",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_reimbursement_guide",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "diagnostic_imaging"
+    ],
+    "tags": [
+      "reimbursement",
+      "diagnostic",
+      "unified prescription",
+      "results",
+      "invoice",
+      "nssf"
+    ],
+    "text": "For ambulatory diagnostic reimbursement, Nextcare's Lebanon guide identifies a physician-completed unified prescription, original test results, an original itemized invoice/receipt, patient ID/insurance card and applicable NSSF documents.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-reimbursement-physio",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_reimbursement_guide",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "physiotherapy"
+    ],
+    "tags": [
+      "reimbursement",
+      "physiotherapy",
+      "sessions",
+      "prescription",
+      "invoice",
+      "radiology",
+      "nssf"
+    ],
+    "text": "For physiotherapy reimbursement, Nextcare's Lebanon guide identifies an original physician-signed/stamped prescription stating the motive and number of sessions, previous radiology results if any, an itemized invoice showing dates and unit price per session, ID/insurance card and applicable NSSF documents.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-reimbursement-medicine",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_reimbursement_guide",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "medication_acute",
+      "medication_chronic"
+    ],
+    "tags": [
+      "reimbursement",
+      "medication",
+      "dosage",
+      "duration",
+      "pharmacy bill",
+      "chronic report",
+      "nssf"
+    ],
+    "text": "For prescribed-medicine reimbursement, Nextcare's Lebanon guide lists an original prescription with medicine details, dosage/administration, quantity and duration, an itemized pharmacy bill, ID/insurance card and NSSF documents when applicable; chronic claims also require a detailed chronic medical report under the payer agreement.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-reimbursement-doctor",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_reimbursement_guide",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit"
+    ],
+    "tags": [
+      "reimbursement",
+      "doctor visit",
+      "physician fees",
+      "prescription",
+      "id",
+      "insurance card"
+    ],
+    "text": "For doctor-visit reimbursement, Nextcare's Lebanon guide lists an original unified prescription including the motive and physician fees, signed and stamped by the physician, plus patient ID and insurance card and applicable NSSF documentation.",
+    "verification": "verified"
+  },
+  {
+    "id": "nextcare-denial-background",
+    "organizationId": "nextcare",
+    "organizationName": "Nextcare",
+    "sourceId": "nextcare_reimbursement_guide",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "denial",
+      "missing documents",
+      "eligibility",
+      "medical necessity",
+      "policy terms"
+    ],
+    "text": "Nextcare's reimbursement FAQ publicly notes common claim-denial grounds including non-eligibility, non-medical necessity, missing documents, or policy terms and conditions, and directs members to the insurer when the reason is unclear.",
+    "verification": "verified"
+  },
+  {
+    "id": "medivisa-ambulatory",
+    "organizationId": "medivisa",
+    "organizationName": "MediVisa",
+    "sourceId": "medivisa_online_procedure",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "diagnostic_imaging",
+      "physiotherapy"
+    ],
+    "tags": [
+      "ambulatory",
+      "medical report",
+      "unified prescription",
+      "insurance card",
+      "id",
+      "nssf",
+      "mri",
+      "mra",
+      "ct",
+      "pet",
+      "physiotherapy"
+    ],
+    "text": "MediVisa's public online procedure lists a detailed physician-signed/stamped medical report, completed unified prescription, insurance card and patient ID for ambulatory approval. For NSSF beneficiaries it specifically calls for NSSF prior approval for CT, MRI/MRA, physiotherapy and PET scan.",
+    "verification": "verified"
+  },
+  {
+    "id": "medivisa-drugs",
+    "organizationId": "medivisa",
+    "organizationName": "MediVisa",
+    "sourceId": "medivisa_online_procedure",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "medication_acute",
+      "medication_chronic"
+    ],
+    "tags": [
+      "drugs",
+      "medication",
+      "chronic",
+      "prescription",
+      "medical report",
+      "coinsurance"
+    ],
+    "text": "MediVisa states that its online drug-approval process uses policy terms, patient history and necessity. Chronic treatment requests require a detailed medical report, a complete signed/stamped prescription with diagnosis, drug and dosage/duration information, and insurance/patient identification; patient coinsurance and non-covered drugs are reflected by the approval workflow.",
+    "verification": "verified"
+  },
+  {
+    "id": "medivisa-cold-case",
+    "organizationId": "medivisa",
+    "organizationName": "MediVisa",
+    "sourceId": "medivisa_cold_case",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "hospitalization_elective"
+    ],
+    "tags": [
+      "hospitalization",
+      "cold case",
+      "claim form",
+      "diagnostic results",
+      "nssf",
+      "approval"
+    ],
+    "text": "For a non-emergency hospital admission, MediVisa's public cold-case process requires the physician-completed hospitalization claim form and related diagnostic results for submission to a MediVisa delegate, with NSSF approval for beneficiaries who have NSSF coverage. Coverage remains subject to policy terms and admission necessity.",
+    "verification": "verified"
+  },
+  {
+    "id": "medivisa-emergency",
+    "organizationId": "medivisa",
+    "organizationName": "MediVisa",
+    "sourceId": "medivisa_er_process",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "emergency",
+      "er",
+      "hospital",
+      "insurance card",
+      "id",
+      "claim form",
+      "nssf"
+    ],
+    "text": "For emergency admission, MediVisa instructs the patient to use a hospital listed in the policy, present insurance and ID cards, and have the attending physician complete the hospitalization claim form. NSSF beneficiaries should secure the NSSF approval; the published workflow states coverage is based on policy terms and conditions.",
+    "verification": "verified"
+  },
+  {
+    "id": "globemed-caregate",
+    "organizationId": "globemed",
+    "organizationName": "GlobeMed Lebanon",
+    "sourceId": "globemed_claims_management",
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "caregate",
+      "eligibility",
+      "claims",
+      "authorization",
+      "outpatient",
+      "provider"
+    ],
+    "text": "GlobeMed Lebanon states that CareGate at provider facilities supports member eligibility verification and claim submission; many outpatient coverage decisions are automated while non-automated authorization requests are handled by GlobeMed.",
+    "verification": "verified"
+  },
+  {
+    "id": "globemed-fit",
+    "organizationId": "globemed",
+    "organizationName": "GlobeMed Lebanon",
+    "sourceId": "globemed_fit",
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "fit",
+      "reimbursement",
+      "chronic refill",
+      "preapproval",
+      "network",
+      "policy details"
+    ],
+    "text": "GlobeMed FIT is publicly described as a member self-service channel for reimbursement claims, chronic prescription refills, pre-approval requests, e-card use, provider-network lookup and policy details.",
+    "verification": "verified"
+  },
+  {
+    "id": "globemed-libano-elective",
+    "organizationId": "globemed",
+    "organizationName": "GlobeMed Lebanon",
+    "sourceId": "libano_suisse_claims",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "hospitalization_elective"
+    ],
+    "tags": [
+      "libano-suisse",
+      "cold case",
+      "mra",
+      "insurance card",
+      "id",
+      "mobile",
+      "nssf"
+    ],
+    "text": "Libano-Suisse's public Lebanon claims procedure describes the GlobeMed cold-case admission path: a physician-completed, signed and stamped MRA plus insurance card, ID and mobile number are provided to the GlobeMed delegate or provider admission office; NSSF-covered members should obtain NSSF approval before admission.",
+    "verification": "verified"
+  },
+  {
+    "id": "globemed-libano-emergency",
+    "organizationId": "globemed",
+    "organizationName": "GlobeMed Lebanon",
+    "sourceId": "libano_suisse_claims",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "libano-suisse",
+      "hot case",
+      "er",
+      "mra",
+      "insurance card",
+      "id",
+      "nssf"
+    ],
+    "text": "Libano-Suisse's public GlobeMed hot-case procedure says the member presents insurance and ID cards for emergency admission, the provider contacts GlobeMed, and a completed signed/stamped MRA is supplied later; NSSF-covered members should obtain the applicable NSSF approval.",
+    "verification": "verified"
+  },
+  {
+    "id": "mednet-reimbursement-core",
+    "organizationId": "mednet",
+    "organizationName": "MedNet Liban",
+    "sourceId": "mednet_reimbursement",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "reimbursement",
+      "receipts",
+      "medical report",
+      "diagnosis",
+      "treatment plan",
+      "prescription",
+      "diagnostic results"
+    ],
+    "text": "MedNet Liban's public reimbursement page requires complete and accurate supporting documents, including a cost-per-service breakdown of receipts, a detailed medical report with diagnosis and relevant treatment information, and copies of diagnostic test results.",
+    "verification": "verified"
+  },
+  {
+    "id": "mednet-reimbursement-complete",
+    "organizationId": "mednet",
+    "organizationName": "MedNet Liban",
+    "sourceId": "mednet_faq",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "complete claim",
+      "medical report",
+      "itemized invoice",
+      "results",
+      "physiotherapy referral",
+      "medication prescription",
+      "discharge summary",
+      "operative notes"
+    ],
+    "text": "MedNet Liban's FAQ describes a complete reimbursement submission as including detailed medical reports, original itemized invoices/receipts and diagnostic results, plus service-specific evidence such as a physician referral for prescribed physiotherapy, a valid prescription for medication, and discharge summary/operative notes for hospitalization or surgery.",
+    "verification": "verified"
+  },
+  {
+    "id": "mednet-reimbursement-deadline",
+    "organizationId": "mednet",
+    "organizationName": "MedNet Liban",
+    "sourceId": "mednet_faq",
+    "requestTypes": [
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "deadline",
+      "60 days",
+      "lebanon",
+      "reimbursement"
+    ],
+    "text": "MedNet Liban's FAQ states that reimbursement claims for treatment taken in Lebanon must be submitted within 60 days of treatment; treatment outside Lebanon has a 90-day period.",
+    "verification": "verified"
+  },
+  {
+    "id": "mednet-preauthorization",
+    "organizationId": "mednet",
+    "organizationName": "MedNet Liban",
+    "sourceId": "mednet_insured_benefits",
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "preauthorization",
+      "prospective case management",
+      "emergency",
+      "guarantee",
+      "network"
+    ],
+    "text": "MedNet Liban publicly describes prospective case management as pre-authorization for intensive and interventional services and says its support team can assist in emergencies with treatment guarantee or pre-authorization-form details. The public page does not provide a complete service-by-service document checklist.",
+    "verification": "partial"
+  },
+  {
+    "id": "mednet-policy-glossary",
+    "organizationId": "mednet",
+    "organizationName": "MedNet Liban",
+    "sourceId": "mednet_glossary",
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "medication_acute",
+      "medication_chronic",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "benefit",
+      "network",
+      "priority payer",
+      "waiting period",
+      "eligible expenses",
+      "exclusion",
+      "policy schedule"
+    ],
+    "text": "MedNet Liban's glossary explains policy concepts relevant to ClaimBot's policy layer, including benefit scope, network/non-network providers, eligible expenses, priority payer coordination, policy schedules, specific/general exclusions and waiting periods. Actual values still depend on the member's controlling policy documents.",
+    "verification": "verified"
+  },
+  {
+    "id": "fidelity-current-cold-case",
+    "organizationId": "fidelity",
+    "organizationName": "Fidelity Insurance",
+    "sourceId": "fidelity_medical_faq",
+    "insurerIds": [
+      "fidelity"
+    ],
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "hospitalization_elective"
+    ],
+    "tags": [
+      "cold case",
+      "prior approval",
+      "24 hours",
+      "medical report",
+      "insurance card",
+      "id",
+      "nssf"
+    ],
+    "text": "Fidelity’s current medical-claims FAQ says a cold medical case should be submitted for prior approval at least 24 hours ahead with the original medical report, patient ID, Fidelity insurance card and NSSF approval when applicable.",
+    "verification": "verified"
+  },
+  {
+    "id": "fidelity-current-emergency",
+    "organizationId": "fidelity",
+    "organizationName": "Fidelity Insurance",
+    "sourceId": "fidelity_medical_faq",
+    "insurerIds": [
+      "fidelity"
+    ],
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "emergency",
+      "approved hospital network",
+      "insurance card",
+      "id",
+      "late nssf approval"
+    ],
+    "text": "Fidelity’s current medical-emergency instructions direct members to the TPA-specific approved hospital network and list patient ID, Fidelity insurance card and late NSSF approval when applicable as hospital-admission documents.",
+    "verification": "verified"
+  },
+  {
+    "id": "fidelity-current-diagnostic",
+    "organizationId": "fidelity",
+    "organizationName": "Fidelity Insurance",
+    "sourceId": "fidelity_medical_faq",
+    "insurerIds": [
+      "fidelity"
+    ],
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "diagnostic_imaging"
+    ],
+    "tags": [
+      "diagnostic tests",
+      "medical report",
+      "insurance card",
+      "id",
+      "provider"
+    ],
+    "text": "For diagnostic tests, Fidelity’s current FAQ instructs members to visit the provider with the original medical report, patient ID and Fidelity insurance card. It does not publish a universal service-by-service authorization rule on that page.",
+    "verification": "verified"
+  },
+  {
+    "id": "fidelity-policy-example-ambulatory",
+    "organizationId": "fidelity",
+    "organizationName": "Fidelity Insurance",
+    "sourceId": "fidelity_individual_health_2021",
+    "insurerIds": [
+      "fidelity"
+    ],
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "diagnostic_imaging",
+      "physiotherapy"
+    ],
+    "tags": [
+      "policy example",
+      "table of benefits",
+      "mri",
+      "x-ray",
+      "ultrasound",
+      "laboratory",
+      "pet",
+      "physiotherapy",
+      "covered"
+    ],
+    "text": "Fidelity’s public 2021 Individual Healthcare policy example lists outpatient diagnostic tests such as X-rays, MRI, scans, ultrasound and laboratory tests, and physiotherapy, as covered benefits in that product. This is a plan-specific example and must not be treated as proof that a different Fidelity member has the same benefit.",
+    "verification": "partial"
+  },
+  {
+    "id": "fidelity-policy-example-network-nssf",
+    "organizationId": "fidelity",
+    "organizationName": "Fidelity Insurance",
+    "sourceId": "fidelity_individual_health_2021",
+    "insurerIds": [
+      "fidelity"
+    ],
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit",
+      "diagnostic_imaging",
+      "physiotherapy",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "policy example",
+      "network",
+      "reimbursement",
+      "nssf",
+      "nextcare",
+      "claims settlement"
+    ],
+    "text": "The same public Fidelity policy example distinguishes in-network from out-of-network settlement, applies specific NSSF-member settlement terms, and points to Nextcare for the provider network. These percentages and conditions are document-specific and require the member’s controlling policy before use.",
+    "verification": "partial"
+  },
+  {
+    "id": "sna-current-health-benefits",
+    "organizationId": "sna",
+    "organizationName": "SNA",
+    "sourceId": "sna_spiral_health",
+    "insurerIds": [
+      "sna"
+    ],
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "diagnostic_imaging",
+      "physiotherapy",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "spiral health",
+      "inpatient",
+      "outpatient",
+      "diagnostic tests",
+      "imaging",
+      "physiotherapy",
+      "nextcare"
+    ],
+    "text": "SNA’s current Spiral Safety health page describes inpatient hospitalization/emergency benefits and optional outpatient services including laboratory, imaging, explorations and physiotherapy. This is product-level information; actual coverage still depends on the member’s plan and policy.",
+    "verification": "partial"
+  },
+  {
+    "id": "sna-gc-hospital-authorization",
+    "organizationId": "sna",
+    "organizationName": "SNA",
+    "sourceId": "sna_spiral_health_gc",
+    "insurerIds": [
+      "sna"
+    ],
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "general conditions",
+      "tpa",
+      "authorization form",
+      "physician report",
+      "emergency",
+      "non-emergency",
+      "hospital"
+    ],
+    "text": "SNA’s public Spiral Health general-conditions example says non-emergency hospitalization at an approved network provider uses a TPA Authorization Form supported by the attending physician’s report, while emergency hospitalization requires prompt TPA notification/authorization. Applicability depends on the member contract.",
+    "verification": "partial"
+  },
+  {
+    "id": "sna-gc-ambulatory-nssf",
+    "organizationId": "sna",
+    "organizationName": "SNA",
+    "sourceId": "sna_spiral_health_gc",
+    "insurerIds": [
+      "sna"
+    ],
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "diagnostic_imaging",
+      "physiotherapy"
+    ],
+    "tags": [
+      "general conditions",
+      "ambulatory",
+      "authorization form",
+      "medical report",
+      "nssf",
+      "mri",
+      "ct scan",
+      "network"
+    ],
+    "text": "SNA’s public Spiral Health general conditions describe ambulatory authorization through the TPA using a medical report specifying the requested examination/treatment and reason, and state that supplementary NSSF members may need NSSF preauthorization for external treatments such as MRI or CT. This is a policy example, not a universal rule for every SNA plan.",
+    "verification": "partial"
+  },
+  {
+    "id": "medgulf-current-mfd-benefits",
+    "organizationId": "medgulf",
+    "organizationName": "MEDGULF",
+    "sourceId": "medgulf_individual_health",
+    "insurerIds": [
+      "medgulf"
+    ],
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "diagnostic_imaging",
+      "hospitalization_elective",
+      "hospitalization_emergency"
+    ],
+    "tags": [
+      "medilife",
+      "mfd",
+      "inpatient",
+      "outpatient",
+      "laboratory",
+      "radiology",
+      "emergency",
+      "cold case",
+      "limits"
+    ],
+    "text": "MEDGULF’s current MEDILIFE (MFD) product page describes inpatient cover for emergency/cold hospitalization and surgery and outpatient cover for laboratory and radiology tests, with plan-level benefit limits. A member’s actual policy remains controlling.",
+    "verification": "partial"
+  },
+  {
+    "id": "medgulf-medivisa-ambulatory",
+    "organizationId": "medgulf",
+    "organizationName": "MEDGULF / MediVisa",
+    "sourceId": "medgulf_medical_claim_workflow",
+    "insurerIds": [
+      "medgulf"
+    ],
+    "requestTypes": [
+      "preauthorization"
+    ],
+    "services": [
+      "diagnostic_imaging",
+      "physiotherapy"
+    ],
+    "tags": [
+      "ambulatory",
+      "medical report",
+      "unified prescription",
+      "diagnosis",
+      "nssf",
+      "ct",
+      "mri",
+      "physiotherapy",
+      "insurance card",
+      "id",
+      "previous results"
+    ],
+    "text": "MEDGULF’s public MediVisa outpatient workflow asks for a physician-signed/stamped medical report and unified prescription stating diagnosis and requested tests; NSSF-covered members obtain prior NSSF approval for CT, MRI and physiotherapy, then provide the prescription, insurance/ID cards and prior results to a contracted provider. The workflow PDF is retained as supporting public evidence and should be verified against current member instructions.",
+    "verification": "partial"
+  },
+  {
+    "id": "medgulf-medivisa-drugs",
+    "organizationId": "medgulf",
+    "organizationName": "MEDGULF / MediVisa",
+    "sourceId": "medgulf_medical_claim_workflow",
+    "insurerIds": [
+      "medgulf"
+    ],
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "medication_acute",
+      "medication_chronic"
+    ],
+    "tags": [
+      "drugs",
+      "prescription",
+      "medical report",
+      "diagnosis",
+      "drug name",
+      "quantity",
+      "dosage",
+      "bill",
+      "receipt",
+      "refund"
+    ],
+    "text": "MEDGULF’s public MediVisa workflow describes prescribed-medicine documentation including a signed/stamped medical report and unified prescription with diagnosis, medicine name, quantity and dosage; its reimbursement path also lists the completed prescription and original bill/receipt. Policy terms remain controlling.",
+    "verification": "partial"
+  },
+  {
+    "id": "medgulf-medivisa-doctor-visit",
+    "organizationId": "medgulf",
+    "organizationName": "MEDGULF / MediVisa",
+    "sourceId": "medgulf_medical_claim_workflow",
+    "insurerIds": [
+      "medgulf"
+    ],
+    "requestTypes": [
+      "preauthorization",
+      "reimbursement"
+    ],
+    "services": [
+      "doctor_visit"
+    ],
+    "tags": [
+      "doctor visit",
+      "network physician",
+      "outside network",
+      "receipt",
+      "refund"
+    ],
+    "text": "MEDGULF’s public MediVisa workflow directs members to contracted network physicians for doctor visits; outside the network it describes paying the consultation and submitting the physician-signed/stamped receipt for refund, subject to policy conditions.",
+    "verification": "partial"
+  }
+]

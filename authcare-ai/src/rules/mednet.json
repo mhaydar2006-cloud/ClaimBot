@@ -1,0 +1,197 @@
+{
+  "organizationId": "mednet",
+  "organizationName": "MedNet Liban",
+  "country": "Lebanon",
+  "coverageNote": "Verified reimbursement-document guidance is encoded, including service-specific physiotherapy and timing requirements. MedNet publicly describes pre-authorization, but does not publish a complete service-by-service preauthorization document checklist, so those combinations remain Review Required.",
+  "rules": [
+    {
+      "id": "mednet_reimb_receipts",
+      "organizationId": "mednet",
+      "organizationName": "MedNet Liban",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.receipts_breakdown",
+      "label": "Breakdown of receipts / payments",
+      "explanation": "MedNet Liban lists a breakdown of receipts for payments made, showing the cost per service, among required reimbursement documents.",
+      "action": "Attach a breakdown of receipts showing the cost per service.",
+      "sourceId": "mednet_reimbursement"
+    },
+    {
+      "id": "mednet_reimb_report",
+      "organizationId": "mednet",
+      "organizationName": "MedNet Liban",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.medical_report",
+      "label": "Full and detailed medical report",
+      "explanation": "MedNet Liban lists a full and detailed medical report with diagnosis among reimbursement documents.",
+      "action": "Attach the treating doctor's detailed medical report.",
+      "sourceId": "mednet_reimbursement"
+    },
+    {
+      "id": "mednet_reimb_plan",
+      "organizationId": "mednet",
+      "organizationName": "MedNet Liban",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.treatment_plan",
+      "label": "Treatment plan / prescription",
+      "explanation": "MedNet Liban's reimbursement guidance includes the treatment plan and prescription from the treating doctor.",
+      "action": "Attach the applicable treatment plan/prescription.",
+      "sourceId": "mednet_reimbursement"
+    },
+    {
+      "id": "mednet_reimb_results",
+      "organizationId": "mednet",
+      "organizationName": "MedNet Liban",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.diagnostic_results_copies",
+      "label": "Copies of diagnostic test results",
+      "explanation": "MedNet Liban lists copies of diagnostic test results among reimbursement supporting documents.",
+      "action": "Attach copies of relevant diagnostic test results.",
+      "sourceId": "mednet_reimbursement"
+    },
+    {
+      "id": "mednet_reimb_discharge",
+      "organizationId": "mednet",
+      "organizationName": "MedNet Liban",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.discharge_summary",
+      "label": "Discharge summary for hospitalization",
+      "explanation": "MedNet Liban's reimbursement guidance specifies the discharge summary when hospitalized as part of the detailed medical documentation.",
+      "action": "Attach the discharge summary.",
+      "sourceId": "mednet_reimbursement"
+    },
+    {
+      "id": "mednet_reimb_physio_referral",
+      "organizationId": "mednet",
+      "organizationName": "MedNet Liban",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "physiotherapy"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.referral_letter",
+      "label": "Treating physician referral for physiotherapy",
+      "explanation": "MedNet Liban's reimbursement FAQ lists a referral letter from the treating physician for prescribed physiotherapy as part of a complete reimbursement claim.",
+      "action": "Attach the treating physician's referral letter for the prescribed physiotherapy.",
+      "sourceId": "mednet_faq"
+    },
+    {
+      "id": "mednet_reimb_deadline",
+      "organizationId": "mednet",
+      "organizationName": "MedNet Liban",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "deadline",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "serviceDate",
+      "label": "Lebanon reimbursement submission window",
+      "explanation": "MedNet Liban's FAQ states that treatment taken in Lebanon should be submitted within 60 days from the date of treatment.",
+      "action": "Check the service date and submit within the applicable timeframe.",
+      "sourceId": "mednet_faq",
+      "deadlineDays": 60
+    },
+    {
+      "id": "mednet_provider_workflow",
+      "organizationId": "mednet",
+      "organizationName": "MedNet Liban",
+      "requestTypes": [
+        "preauthorization",
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "MedNet provider portal supports claims workflow",
+      "explanation": "MedNet Liban states that its provider portal provides access to patient eligibility, claims information, payments, and related support.",
+      "sourceId": "mednet_providers"
+    }
+  ]
+}

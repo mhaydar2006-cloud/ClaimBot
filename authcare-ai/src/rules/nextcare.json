@@ -1,0 +1,1185 @@
+{
+  "organizationId": "nextcare",
+  "organizationName": "Nextcare",
+  "country": "Lebanon",
+  "coverageNote": "Verified from current public Nextcare Lebanon pre-authorization guidance and reimbursement guide. Patient-specific benefits remain outside ClaimBot's determination.",
+  "rules": [
+    {
+      "id": "nextcare_pre_auth_ambulatory_prescription",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "diagnostic_imaging",
+        "physiotherapy"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.unified_prescription",
+      "label": "Unified prescription",
+      "explanation": "Nextcare's Lebanon guide asks for a unified prescription for ambulatory services, adequately completed with patient and clinical details.",
+      "action": "Attach or confirm the unified prescription before submission.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_ambulatory_signature",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "diagnostic_imaging",
+        "physiotherapy"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianSignature",
+      "label": "Physician signature confirmed",
+      "explanation": "The unified prescription should be signed by a licensed physician.",
+      "action": "Obtain the physician's signature.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_ambulatory_stamp",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "diagnostic_imaging",
+        "physiotherapy"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianStamp",
+      "label": "Physician stamp confirmed",
+      "explanation": "The unified prescription should be stamped by a licensed physician.",
+      "action": "Obtain the physician's stamp.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_ambulatory_card",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "diagnostic_imaging",
+        "physiotherapy"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.insurance_card",
+      "label": "Insurance card copy",
+      "explanation": "Nextcare lists a copy of the insurance card among the ambulatory pre-authorization documents.",
+      "action": "Add the patient's insurance card copy.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_ambulatory_id",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "diagnostic_imaging",
+        "physiotherapy"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.patient_id",
+      "label": "Patient ID copy",
+      "explanation": "Nextcare lists a copy of the patient's identification among the ambulatory pre-authorization documents.",
+      "action": "Add the patient's identification copy.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_ambulatory_nssf",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "diagnostic_imaging",
+        "physiotherapy"
+      ],
+      "procedures": [
+        "mri",
+        "ct_scan",
+        "not_applicable"
+      ],
+      "kind": "document",
+      "requirementLevel": "conditional",
+      "verification": "conditional",
+      "target": "documents.nssf_approval",
+      "label": "Applicable NSSF prior approval",
+      "explanation": "Nextcare states that NSSF prior approval is required when applicable for tests requiring NSSF approval, explicitly including MRI, CT scan, and physiotherapy in its Lebanon guide.",
+      "action": "If the patient benefits from NSSF for this service, obtain the applicable NSSF prior approval.",
+      "sourceId": "nextcare_beneficiary_guide",
+      "condition": {
+        "nssfStatuses": [
+          "yes"
+        ]
+      }
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_mra",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.medical_report_mra",
+      "label": "Detailed medical report / MRA",
+      "explanation": "For non-emergency inpatient admission, Nextcare requests a detailed medical report/MRA dated, signed, and stamped by a licensed physician.",
+      "action": "Complete and attach the detailed medical report/MRA.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_signature",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianSignature",
+      "label": "MRA physician signature confirmed",
+      "explanation": "The detailed medical report/MRA should be signed by a licensed physician.",
+      "action": "Obtain the treating physician's signature.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_stamp",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianStamp",
+      "label": "MRA physician stamp confirmed",
+      "explanation": "The detailed medical report/MRA should be stamped by a licensed physician.",
+      "action": "Obtain the treating physician's stamp.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_card",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.insurance_card",
+      "label": "Insurance card copy",
+      "explanation": "Nextcare requests a copy of the insurance card for elective inpatient pre-authorization.",
+      "action": "Add the insurance card copy.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_id",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.patient_id",
+      "label": "Patient ID copy",
+      "explanation": "Nextcare requests a copy of the patient's identification for elective inpatient pre-authorization.",
+      "action": "Add the patient identification copy.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_results",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.related_results",
+      "label": "Related procedure / test results",
+      "explanation": "Nextcare asks for the results of related procedures such as lab tests, X-ray, CT, ultrasound, or MRI.",
+      "action": "Attach the relevant supporting test/procedure results.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_provider",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "providerName",
+      "label": "Hospital / provider name",
+      "explanation": "The provider name is listed among the information needed for elective inpatient pre-authorization.",
+      "action": "Enter the hospital or provider name.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_admission_date",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "admissionDate",
+      "label": "Admission date",
+      "explanation": "Nextcare lists the admission date among the elective inpatient pre-authorization information.",
+      "action": "Enter the planned admission date.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_inpatient_nssf",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "kind": "document",
+      "requirementLevel": "conditional",
+      "verification": "conditional",
+      "target": "documents.nssf_approval",
+      "label": "NSSF pre-approval when required",
+      "explanation": "Nextcare lists NSSF pre-approval when required for elective inpatient admission.",
+      "action": "If the patient benefits from NSSF for this admission, secure the NSSF pre-approval.",
+      "sourceId": "nextcare_beneficiary_guide",
+      "condition": {
+        "nssfStatuses": [
+          "yes"
+        ]
+      }
+    },
+    {
+      "id": "nextcare_pre_auth_emergency_card",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.insurance_card",
+      "label": "Insurance card",
+      "explanation": "For emergency admission, Nextcare instructs the member to present a digital or physical insurance card.",
+      "action": "Confirm the insurance card is available.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_emergency_id",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.patient_id",
+      "label": "Valid identification",
+      "explanation": "For emergency admission, Nextcare instructs the member to present valid identification.",
+      "action": "Confirm valid identification is available.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_emergency_workflow",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "Provider contacts Nextcare",
+      "explanation": "The healthcare provider contacts Nextcare for evaluation and claim adjudication; authorization is delivered to the hospital after approval.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_acute_rx_prescription",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_acute"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.unified_prescription",
+      "label": "Unified medical prescription",
+      "explanation": "For acute prescribed medicine, Nextcare asks for an adequately completed unified medical prescription.",
+      "action": "Attach or confirm the unified medical prescription.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_acute_rx_signature",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_acute"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianSignature",
+      "label": "Physician signature confirmed",
+      "explanation": "The acute medication prescription should be signed by a licensed physician.",
+      "action": "Obtain the physician's signature.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_acute_rx_stamp",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_acute"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianStamp",
+      "label": "Physician stamp confirmed",
+      "explanation": "The acute medication prescription should be stamped by a licensed physician.",
+      "action": "Obtain the physician's stamp.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_acute_rx_card",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_acute"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.insurance_card",
+      "label": "Insurance card copy",
+      "explanation": "Nextcare asks for a copy of the insurance card for acute prescribed medicine pre-approval.",
+      "action": "Add the insurance card copy.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_acute_rx_id",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_acute"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.patient_id",
+      "label": "Patient ID copy",
+      "explanation": "Nextcare asks for a copy of patient identification for acute prescribed medicine pre-approval.",
+      "action": "Add the patient identification copy.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_chronic_rx_form",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_chronic"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "Chronic prescription request route",
+      "explanation": "Nextcare states that chronic prescription requests can use the Nextcare chronic prescription form submitted through the member's HR department or the published PBM Lebanon email route.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_chronic_request_form_doc",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_chronic"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.preauthorization_form",
+      "label": "Chronic prescription request form",
+      "explanation": "Nextcare directs chronic prescription requests through its chronic prescription form / published chronic-request route.",
+      "action": "Complete the chronic prescription request form before sending it through the applicable Nextcare/HR route.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_chronic_rx_card",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_chronic"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "Insurance card used at pharmacy after approval",
+      "explanation": "Nextcare instructs the member to present the insurance card at the pharmacy after an approved chronic prescription is issued.",
+      "action": "Confirm the insurance card is available.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_chronic_rx_id",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_chronic"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "Identification used at pharmacy after approval",
+      "explanation": "Nextcare instructs the member to present identification at the pharmacy after an approved chronic prescription is issued.",
+      "action": "Confirm patient identification is available.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_chronic_rx_key",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "medication_chronic"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "Prescription key issued after approval",
+      "explanation": "Once a chronic request is approved, Nextcare states that a prescription key is shared for use at the pharmacy.",
+      "action": "After approval, use the prescription key according to the normal pharmacy workflow.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_doctor_card",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "doctor_visit"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.insurance_card",
+      "label": "Insurance card",
+      "explanation": "For a direct-billing doctor visit, Nextcare instructs the member to provide the insurance card at the clinic.",
+      "action": "Confirm the insurance card is available.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_doctor_id",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "doctor_visit"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.patient_id",
+      "label": "Identification card",
+      "explanation": "For a direct-billing doctor visit, Nextcare instructs the member to provide identification at the clinic.",
+      "action": "Confirm patient identification is available.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_pre_auth_doctor_manual",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "doctor_visit"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "conditional",
+      "label": "Pre-authorization may be requested in specific cases",
+      "explanation": "Nextcare states that in specific situations it may require pre-authorization to confirm medical eligibility for a doctor visit.",
+      "action": "If the clinic system requests authorization, verify directly through the Nextcare workflow.",
+      "sourceId": "nextcare_beneficiary_guide"
+    },
+    {
+      "id": "nextcare_reimb_inpatient_report",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.medical_report",
+      "label": "Original detailed medical report",
+      "explanation": "Nextcare's Lebanon reimbursement guide lists an original detailed medical report for admission including dated medical history.",
+      "action": "Attach the original detailed medical report.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_inpatient_er",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.emergency_room_sheet",
+      "label": "Emergency room sheet",
+      "explanation": "The reimbursement guide lists an emergency room sheet when applicable to inpatient claims.",
+      "action": "Attach the emergency room sheet.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_inpatient_or",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "conditional",
+      "verification": "conditional",
+      "target": "documents.operating_room_sheet",
+      "label": "Operating room sheet if applicable",
+      "explanation": "The reimbursement guide lists an operating room sheet among inpatient supporting documents. It is relevant when surgery/procedure documentation exists.",
+      "action": "Attach the operating room sheet when applicable; otherwise verify with the payer/TPA.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_inpatient_results",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.related_results",
+      "label": "Prescribed tests/results/treatment documentation",
+      "explanation": "Nextcare's reimbursement guide lists prescribed tests and results/treatment documentation for inpatient claims.",
+      "action": "Attach the relevant prescribed tests, results, and treatment documentation.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_inpatient_discharge",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.discharge_summary",
+      "label": "Discharge summary",
+      "explanation": "Nextcare's reimbursement guide lists a discharge summary including the discharge diagnosis.",
+      "action": "Attach the discharge summary including discharge diagnosis.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_inpatient_invoice",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.itemized_invoice_receipt",
+      "label": "Original itemized invoice and receipt",
+      "explanation": "Nextcare lists an original itemized invoice and receipt stamped and signed by the provider for inpatient reimbursement.",
+      "action": "Attach the original itemized invoice and receipt.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_ambulatory_prescription",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "diagnostic_imaging"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.unified_prescription",
+      "label": "Unified prescription",
+      "explanation": "For ambulatory diagnostic reimbursement, Nextcare lists an adequately completed unified prescription including the motive, stamped and signed by the physician.",
+      "action": "Attach the unified prescription.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_ambulatory_results",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "diagnostic_imaging"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.related_results",
+      "label": "Original diagnostic results",
+      "explanation": "Nextcare lists original lab/radiology/pathology results stamped and signed by the provider for ambulatory reimbursement.",
+      "action": "Attach the original diagnostic results.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_ambulatory_invoice",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "diagnostic_imaging"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.itemized_invoice_receipt",
+      "label": "Original itemized invoice and receipt",
+      "explanation": "Nextcare lists an original itemized invoice and receipt stamped and signed by the provider for ambulatory diagnostic reimbursement.",
+      "action": "Attach the original itemized invoice and receipt.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_physio_prescription",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "physiotherapy"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.unified_prescription",
+      "label": "Original unified physiotherapy prescription",
+      "explanation": "Nextcare lists an original unified prescription including motive, physician stamp/signature, and the number of sessions.",
+      "action": "Attach the original unified physiotherapy prescription.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_physio_sessions",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "physiotherapy"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "numberOfSessions",
+      "label": "Number of physiotherapy sessions",
+      "explanation": "The reimbursement prescription should mention the number of sessions.",
+      "action": "Enter the number of sessions stated on the prescription.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_physio_previous_results",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "physiotherapy"
+      ],
+      "kind": "document",
+      "requirementLevel": "conditional",
+      "verification": "conditional",
+      "target": "documents.previous_radiology_results",
+      "label": "Previous radiology results if any",
+      "explanation": "Nextcare's reimbursement guide lists original previous radiology results if any for physiotherapy claims.",
+      "action": "Attach previous radiology results when they exist.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_physio_invoice",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "physiotherapy"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.itemized_invoice_receipt",
+      "label": "Itemized physiotherapy invoice",
+      "explanation": "Nextcare lists an original itemized invoice mentioning session dates and the unit price of each session.",
+      "action": "Attach the itemized physiotherapy invoice/receipt.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_meds_prescription",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "medication_acute",
+        "medication_chronic"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.unified_prescription",
+      "label": "Original unified medication prescription",
+      "explanation": "Nextcare lists an original unified prescription including motive, medication name, dosage/administration, quantity, and duration, stamped and signed by the physician.",
+      "action": "Attach the original unified medication prescription.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_meds_name",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "medication_acute",
+        "medication_chronic"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "medicationName",
+      "label": "Medication name",
+      "explanation": "The prescription should state the medication name.",
+      "action": "Enter the medication name exactly as prescribed.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_meds_dosage",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "medication_acute",
+        "medication_chronic"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "dosage",
+      "label": "Dosage",
+      "explanation": "The prescription should state the medication dosage.",
+      "action": "Enter the prescribed dosage.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_meds_administration",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "medication_acute",
+        "medication_chronic"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "administration",
+      "label": "Administration instructions",
+      "explanation": "The prescription should state medication administration instructions.",
+      "action": "Enter the administration instructions.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_meds_quantity",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "medication_acute",
+        "medication_chronic"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "quantity",
+      "label": "Medication quantity",
+      "explanation": "The prescription should state the quantity.",
+      "action": "Enter the prescribed quantity.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_meds_duration",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "medication_acute",
+        "medication_chronic"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "duration",
+      "label": "Treatment duration",
+      "explanation": "The prescription should state treatment duration.",
+      "action": "Enter the prescribed duration.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_chronic_report",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "medication_chronic"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.chronic_medical_report",
+      "label": "Detailed chronic medical report",
+      "explanation": "Nextcare states that a copy of the detailed chronic medical report should be submitted for claims related to chronic medicines, with validity depending on the payer agreement.",
+      "action": "Attach the applicable detailed chronic medical report.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_meds_bill",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "medication_acute",
+        "medication_chronic"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.itemized_pharmacy_bill",
+      "label": "Original itemized pharmacy bill",
+      "explanation": "Nextcare lists an original itemized pharmacy bill stamped and signed by the provider.",
+      "action": "Attach the original itemized pharmacy bill.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_doctor_prescription",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.unified_prescription",
+      "label": "Original unified physician form/prescription",
+      "explanation": "Nextcare lists an original unified prescription including motive and physician fees, stamped and signed by the physician for doctor-visit reimbursement.",
+      "action": "Attach the original unified physician form/prescription.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_doctor_fees",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianFees",
+      "label": "Physician fees stated",
+      "explanation": "The doctor-visit reimbursement document should include physician fees.",
+      "action": "Enter the physician fee stated on the claim document.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_common_card",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.insurance_card",
+      "label": "Patient insurance card copy",
+      "explanation": "Nextcare's reimbursement guide lists the insurance card related to the beneficiary who is the subject of the claim.",
+      "action": "Attach the beneficiary's insurance card copy.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_common_id",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.patient_id",
+      "label": "Patient ID copy",
+      "explanation": "Nextcare's reimbursement guide lists a copy of patient identification.",
+      "action": "Attach the patient identification copy.",
+      "sourceId": "nextcare_reimbursement_guide"
+    },
+    {
+      "id": "nextcare_reimb_common_nssf_docs",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic"
+      ],
+      "kind": "document",
+      "requirementLevel": "conditional",
+      "verification": "conditional",
+      "target": "documents.nssf_documents",
+      "label": "NSSF documents when applicable",
+      "explanation": "For co-NSSF arrangements, Nextcare's reimbursement guide describes NSSF documentation requirements whose exact submission can depend on the payer agreement.",
+      "action": "If the patient is co-NSSF insured, confirm the applicable NSSF documents required by the payer agreement.",
+      "sourceId": "nextcare_reimbursement_guide",
+      "condition": {
+        "nssfStatuses": [
+          "yes"
+        ]
+      }
+    },
+    {
+      "id": "nextcare_reimb_inpatient_nssf_bill",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "document",
+      "requirementLevel": "conditional",
+      "verification": "conditional",
+      "target": "documents.nssf_detailed_bill_receipt",
+      "label": "Detailed NSSF bill + receipt for difference",
+      "explanation": "For co-NSSF insured inpatient claims, Nextcare lists a detailed NSSF bill with a receipt for the NSSF difference.",
+      "action": "If co-NSSF applies, attach the detailed NSSF bill and receipt for the difference.",
+      "sourceId": "nextcare_reimbursement_guide",
+      "condition": {
+        "nssfStatuses": [
+          "yes"
+        ]
+      }
+    },
+    {
+      "id": "nextcare_reimb_submission_workflow",
+      "organizationId": "nextcare",
+      "organizationName": "Nextcare",
+      "requestTypes": [
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "Submission route depends on the insurance agreement",
+      "explanation": "Nextcare describes Lumi online submission, email submission where available, or indirect submission through HR/insurance company depending on the payer agreement.",
+      "sourceId": "nextcare_reimbursement_guide"
+    }
+  ]
+}

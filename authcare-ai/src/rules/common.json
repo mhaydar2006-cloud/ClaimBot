@@ -1,0 +1,68 @@
+{
+  "organizationId": "claimbot",
+  "organizationName": "ClaimBot",
+  "country": "Lebanon",
+  "coverageNote": "Internal intake requirements only; these are not insurance coverage rules.",
+  "rules": [
+    {
+      "id": "common_patient_name",
+      "organizationId": "claimbot",
+      "organizationName": "ClaimBot",
+      "requestTypes": ["preauthorization", "reimbursement"],
+      "services": ["doctor_visit", "diagnostic_imaging", "physiotherapy", "medication_acute", "medication_chronic", "hospitalization_elective", "hospitalization_emergency"],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "internal",
+      "target": "patientName",
+      "label": "Patient full name",
+      "explanation": "ClaimBot requires a patient name to create and track the request.",
+      "action": "Enter the patient's full name.",
+      "sourceId": "claimbot_intake"
+    },
+    {
+      "id": "common_dob",
+      "organizationId": "claimbot",
+      "organizationName": "ClaimBot",
+      "requestTypes": ["preauthorization", "reimbursement"],
+      "services": ["doctor_visit", "diagnostic_imaging", "physiotherapy", "medication_acute", "medication_chronic", "hospitalization_elective", "hospitalization_emergency"],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "internal",
+      "target": "dob",
+      "label": "Date of birth",
+      "explanation": "ClaimBot requires date of birth as a basic request identifier.",
+      "action": "Enter the patient's date of birth.",
+      "sourceId": "claimbot_intake"
+    },
+    {
+      "id": "common_member_id",
+      "organizationId": "claimbot",
+      "organizationName": "ClaimBot",
+      "requestTypes": ["preauthorization", "reimbursement"],
+      "services": ["doctor_visit", "diagnostic_imaging", "physiotherapy", "medication_acute", "medication_chronic", "hospitalization_elective", "hospitalization_emergency"],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "internal",
+      "target": "memberId",
+      "label": "Insurance member / policy identifier",
+      "explanation": "ClaimBot uses the member identifier to keep the request tied to the selected coverage record.",
+      "action": "Enter the member or policy identifier shown on the insurance card.",
+      "sourceId": "claimbot_intake"
+    },
+    {
+      "id": "common_diagnosis",
+      "organizationId": "claimbot",
+      "organizationName": "ClaimBot",
+      "requestTypes": ["preauthorization", "reimbursement"],
+      "services": ["diagnostic_imaging", "physiotherapy", "medication_acute", "medication_chronic", "hospitalization_elective", "hospitalization_emergency"],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "internal",
+      "target": "diagnosisMotive",
+      "label": "Diagnosis / clinical motive",
+      "explanation": "The selected workflows require a medical reason or diagnosis to be documented.",
+      "action": "Enter the diagnosis or clinical motive exactly as provided by the treating physician.",
+      "sourceId": "claimbot_intake"
+    }
+  ]
+}

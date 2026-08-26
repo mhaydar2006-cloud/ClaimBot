@@ -1,0 +1,348 @@
+{
+  "organizationId": "globemed",
+  "organizationName": "GlobeMed Lebanon",
+  "country": "Lebanon",
+  "coverageNote": "Partial verified coverage. Current encoded document rules are specifically supported by Libano-Suisse's published GlobeMed Lebanon admission workflow; other GlobeMed payer combinations require manual verification.",
+  "rules": [
+    {
+      "id": "globemed_libano_elective_mra",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.medical_report_mra",
+      "label": "Medical Report for Admission (MRA)",
+      "explanation": "Libano-Suisse's Lebanon claims procedure instructs the attending physician to complete the GlobeMed Lebanon Medical Report for Admission.",
+      "action": "Complete and provide the MRA before the scheduled admission workflow.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_elective_signature",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianSignature",
+      "label": "Attending physician signature",
+      "explanation": "The published Libano-Suisse/GlobeMed workflow states that the MRA is to be signed by the attending physician.",
+      "action": "Obtain the attending physician's signature on the MRA.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_elective_stamp",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianStamp",
+      "label": "Attending physician stamp",
+      "explanation": "The published Libano-Suisse/GlobeMed workflow states that the MRA is to be stamped by the attending physician.",
+      "action": "Obtain the attending physician's stamp on the MRA.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_elective_card",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.insurance_card",
+      "label": "Medical insurance card",
+      "explanation": "The published admission workflow lists the medical insurance card among the items provided to the GlobeMed delegate/admission office.",
+      "action": "Confirm the patient's medical insurance card is available.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_elective_id",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.patient_id",
+      "label": "Patient ID card",
+      "explanation": "The published admission workflow lists the patient's ID card among the items provided to the GlobeMed delegate/admission office.",
+      "action": "Confirm the patient's identification is available.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_elective_mobile",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "mobileNumber",
+      "label": "Patient mobile number",
+      "explanation": "Libano-Suisse's published GlobeMed admission workflow lists the mobile number among the information provided to the delegate/admission office.",
+      "action": "Enter a patient contact mobile number.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_elective_nssf",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "document",
+      "requirementLevel": "conditional",
+      "verification": "conditional",
+      "target": "documents.nssf_approval",
+      "label": "NSSF approval when applicable",
+      "explanation": "Libano-Suisse states that an adherent with NSSF coverage should secure NSSF approval before admission and provide it to the provider.",
+      "action": "If the patient has NSSF coverage for the admission, obtain the NSSF approval.",
+      "sourceId": "libano_suisse_claims",
+      "condition": {
+        "nssfStatuses": [
+          "yes"
+        ]
+      }
+    },
+    {
+      "id": "globemed_libano_elective_workflow",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_elective"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "Provider / GlobeMed delegate submits for approval",
+      "explanation": "The provider admission office or GlobeMed representative forwards the admission request for processing; the GlobeMed delegate provides the hospital with the approval when granted.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_emergency_card",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.insurance_card",
+      "label": "Medical insurance card",
+      "explanation": "For a Libano-Suisse in-hospital hot case, the insured presents the medical insurance card and the provider contacts GlobeMed Lebanon.",
+      "action": "Confirm the medical insurance card is available.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_emergency_id",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.patient_id",
+      "label": "Patient ID card",
+      "explanation": "For a Libano-Suisse in-hospital hot case, the insured presents an ID card.",
+      "action": "Confirm the patient's identification is available.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_emergency_mra",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "document",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "documents.medical_report_mra",
+      "label": "Medical Report for Admission",
+      "explanation": "The published hot-case workflow says the Medical Report for Admission, filled, stamped, and signed by the attending physician, should subsequently be provided by the provider.",
+      "action": "Complete and provide the MRA as part of the emergency admission documentation.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_emergency_signature",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianSignature",
+      "label": "MRA physician signature confirmed",
+      "explanation": "The published Libano-Suisse hot-case workflow specifies that the Medical Report for Admission is signed by the attending physician.",
+      "action": "Obtain the attending physician signature on the MRA.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_emergency_stamp",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "field",
+      "requirementLevel": "required",
+      "verification": "verified",
+      "target": "physicianStamp",
+      "label": "MRA physician stamp confirmed",
+      "explanation": "The published Libano-Suisse hot-case workflow specifies that the Medical Report for Admission is stamped by the attending physician.",
+      "action": "Obtain the attending physician stamp on the MRA.",
+      "sourceId": "libano_suisse_claims"
+    },
+    {
+      "id": "globemed_libano_emergency_nssf",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization"
+      ],
+      "services": [
+        "hospitalization_emergency"
+      ],
+      "insurerIds": [
+        "libano-suisse"
+      ],
+      "kind": "document",
+      "requirementLevel": "conditional",
+      "verification": "conditional",
+      "target": "documents.nssf_approval",
+      "label": "NSSF approval when applicable",
+      "explanation": "The published hot-case workflow states that patients with NSSF coverage should obtain NSSF approval and provide it to the provider.",
+      "action": "If the patient has NSSF coverage, secure and provide the applicable NSSF approval.",
+      "sourceId": "libano_suisse_claims",
+      "condition": {
+        "nssfStatuses": [
+          "yes"
+        ]
+      }
+    },
+    {
+      "id": "globemed_general_workflow",
+      "organizationId": "globemed",
+      "organizationName": "GlobeMed Lebanon",
+      "requestTypes": [
+        "preauthorization",
+        "reimbursement"
+      ],
+      "services": [
+        "doctor_visit",
+        "diagnostic_imaging",
+        "physiotherapy",
+        "medication_acute",
+        "medication_chronic",
+        "hospitalization_elective",
+        "hospitalization_emergency"
+      ],
+      "kind": "workflow",
+      "requirementLevel": "informational",
+      "verification": "verified",
+      "label": "Provider uses GlobeMed claims/authorization workflow",
+      "explanation": "GlobeMed states that CareGate at provider facilities supports eligibility checks and claim submission, with automated outpatient decisions and non-automated authorizations handled by GlobeMed.",
+      "sourceId": "globemed_claims_management"
+    }
+  ]
+}
